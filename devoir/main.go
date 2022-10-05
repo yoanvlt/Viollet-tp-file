@@ -7,6 +7,7 @@ import (
 	"log"
 	"strconv"
 	"math/rand"
+	"time"
 )	
 
 func main(){
@@ -130,9 +131,10 @@ func dernier(mot string){
 	fmt.Println(newmot)
 }
 
-//fonction qui renvoie un nombre aleatoire entre 1 et 100
+
 func random() {
-	rand.Seed(42)
-	fmt.Println(rand.Intn(100))
+	rand.Seed(time.Now().UnixNano())
+	i := rand.Intn(100)
+	fmt.Println(i)
 }
 	
